@@ -1,0 +1,109 @@
+<Button>:
+	font_size: 40
+
+<MyLayout>:
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+		TextInput:
+			font_size: 100
+			size_hint: 1,0.1
+			halign: "right"
+			id: show
+			text: "0"
+		GridLayout:
+			id: grid
+			cols: 4
+			rows: 5
+			
+			Button:
+				id: exit
+				text: "OFF"
+				on_press: root.exit()
+			Button:
+				id: C
+				text: "C"
+				on_press: root.clear()
+			Button:
+				id: CE
+				text: u"\u00AB"
+				on_press: root.remove()
+			Button:
+				id: div
+				text: "/"
+				on_press: root.math_sign("/")
+			Button:
+				id: 7
+				text: "7"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(7)
+			Button:
+				id: 8
+				text: "8"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(8)
+			Button:
+				id: 9
+				text: "9"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(9)
+			Button:
+				id: mul
+				text: "*"
+				on_press: root.math_sign("*")
+			Button:
+				id: 4
+				text: "4"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(4)
+			Button:
+				id: 5
+				text: "5"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(5)
+			Button:
+				id: 6
+				text: "6"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(6)
+			Button:
+				id: sub
+				text: "-"
+				on_press: root.math_sign("-")
+			Button:
+				id: 1
+				text: "1"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(1)
+			Button:
+				id: 2
+				text: "2"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(2)
+			Button:
+				id: 3
+				text: "3"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(3)
+			Button:
+				id: add
+				text: "+"
+				on_press: root.math_sign("+")
+			Button:
+				id: dive
+				text: "+/-"
+				on_press: root.reverse()
+			Button:
+				id: 0
+				text: "0"
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.button_press(0)
+			Button:
+				id: dot
+				text: "."
+				background_color: (157/255, 157/255, 157/255,1)
+				on_press: root.dot()
+			Button:
+				id: total
+				text: "="
+				on_press: root.total()
